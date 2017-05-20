@@ -5,7 +5,7 @@ _An amazing database for store love_
 [Link para T3 no Google Docs](https://docs.google.com/document/d/1bWyk3xRlpup9H-jTxx2dAkVM_91c94KdML-5VZgI2u8/edit?usp=sharing) (entrega dia 02/06).
 
 ## Parte prática
-__[Especificação](http://www.ic.unicamp.br/~cmbm/MC536/trab30117.pdf).__
+__[Especificação](http://www.ic.unicamp.br/~cmbm/MC536/trab30117.pdf)__ (entrega dia 09/06).
 
 Resumo:
 -  Desenvolver o que foi prometido em T2; salvo exceções que devem ser justificadas na parte escrita;
