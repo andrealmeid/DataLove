@@ -1,0 +1,13 @@
+# DataLove
+_An amazing database for store love_
+
+## Parte escrita
+[Link para T3 no Google Docs](https://docs.google.com/document/d/1bWyk3xRlpup9H-jTxx2dAkVM_91c94KdML-5VZgI2u8/edit?usp=sharing) (entrega dia 02/06).
+
+## Parte prática
+__[Especificação](http://www.ic.unicamp.br/~cmbm/MC536/trab30117.pdf).__
+
+Resumo:
+-  Desenvolver o que foi prometido em T2; salvo exceções que devem ser justificadas na parte escrita;
+- Fazer uma apresentação de 15 minutos, incluindo uma demostração ao vivo do software. Deve ser possível ver o código fonte das consultas e inserções.
+- Usar um SGDB relacional, pode ser do Kleber ou instalado na maquina de alguem.
