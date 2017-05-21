@@ -8,6 +8,6 @@ _An amazing database for store love_
 __[Especificação](http://www.ic.unicamp.br/~cmbm/MC536/trab30117.pdf)__ (entrega dia 09/06).
 
 Resumo:
--  Desenvolver o que foi prometido em T2; salvo exceções que devem ser justificadas na parte escrita;
+-  Desenvolver o que foi prometido em [T2](https://docs.google.com/document/d/10PkkHCgRBObbstiPGx3No5o24EuxUXqwiarU6lrdD0c/edit); salvo exceções que devem ser justificadas na parte escrita;
 - Fazer uma apresentação de 15 minutos, incluindo uma demostração ao vivo do software. Deve ser possível ver o código fonte das consultas e inserções.
 - Usar um SGDB relacional, pode ser do Kleber ou instalado na maquina de alguem.
