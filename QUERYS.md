@@ -1,5 +1,19 @@
-## Examples
+## Consultas
 
-- select Pessoa.id_pes, Pessoa.nome, Pessoa.idade from Pessoa, Spotted where Pessoa.id_pes = Spotted.cita;
+- Spotteds recebido por uma pessoa Fulano
+``` sql
+SELECT Spotted.texto FROM Spotted WHERE Spotted.cita = (SELECT id_pes FROM Pessoa WHERE nome = ‘Fulano’)
+```
 
-TODO: verificar se está certo isso
+- Fenótipos de uma pessoa
+``` sql
+SELECT categoria FROM Fenotipo WHERE nome = (SELECT nome FROM Pessoa WHERE nome = ‘Fulano')
+```
+
+- Local que uma pessoa que recebeu o spotted estava    
+
+- Locais mais comuns
+
+- Quais fenótipos mais comuns
+
+- Curso de uma pessoa
