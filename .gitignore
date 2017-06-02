@@ -1,1 +1,4 @@
 __pycache__/
+
+# temporary database changes
+*.sqlite-journal

@@ -48,7 +48,7 @@ SELECT texto, tipo as "reação" FROM Spotted NATURAL JOIN (SELECT * FROM Reage 
 
 - Todos os comentários que uma pessoa fez (e seus respectivos spotteds de origem)
 ``` sql
-SELECT Resultado.nome, Spotted.texto, Resultado.texto FROM Spotted NATURAL JOIN (SELECT * FROM Comentario NATURAL JOIN (SELECT * FROM Pessoa Where Pessoa.nome = 'Fulano'))) AS Resultado;
+SELECT Spotted.texto, Resultado.texto FROM Spotted JOIN (SELECT texto, id_spot FROM Comentario JOIN (SELECT * FROM Pessoa WHERE Pessoa.nome = 'Italove') ON id_pes = autor) AS Resultado ON Resultado.id_spot = Spotted.id_spot;
 ```
 
 - Todos os spotteds anônimos
