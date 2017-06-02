@@ -42,10 +42,10 @@ def main():
         elif cmd == "q":
             sys.exit(0)
 
-        # get spotted
+        # get spotted recebido
         elif cmd == "gs":
             nome = input("Digite o nome: ")
-            data = getSpotted("'"+nome+"'", cursor)
+            data = getSpottedRecebido(nome, cursor)
             if data == []:
                 print("Nenhum resultado.")
             else:
@@ -56,7 +56,7 @@ def main():
         # get fenotipo
         elif cmd == "gf":
             nome = input("Digite o nome: ")
-            data = getFenotipo("'"+nome+"'", cursor)
+            data = getFenotipo(nome, cursor)
             if data == []:
                 print("Nenhum resultado.")
             else:
@@ -69,7 +69,7 @@ def main():
         # get lugar
         elif cmd == "gl":
             nome = input("Digite o nome: ")
-            data = getLocal("'"+nome+"'", cursor)
+            data = getLocal(nome, cursor)
             if data == []:
                 print("Nenhum resultado.")
             else:
