@@ -1,5 +1,5 @@
 # DataLove
-_An amazing database for store love_
+_An amazing database to store love_
 
                                 oo                                        
                                   oo                                        
