@@ -16,7 +16,9 @@ def getLocal(nome, cursor):
     return cursor.fetchall()
 
 # implementacao de Locais mais comuns
-
+def getLocalMaisComum(cursor):
+    cursor.execute("SELECT Tag.nome, 'Local'.evento, Tag.quantidade FROM Tag NATURAL JOIN 'Local' ORDER BY Tag.quantidade DESC LIMIT 1;")
+    return cursor.fetchone()
 
 # implementacao de Quais fenótipos mais comuns
 
