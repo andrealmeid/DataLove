@@ -7,11 +7,16 @@ def getSpotted(nome, cursor):
 
 # implementacao de Fenótipos de uma pessoa
 def getFenotipo(nome, cursor):
-    return
+    cursor.execute("SELECT Resultado.nome, Fenotipo.categoria FROM Fenotipo NATURAL JOIN (SELECT * FROM Tag NATURAL JOIN (SELECT Descrita.id_tag FROM Descrita NATURAL JOIN (SELECT * FROM Pessoa WHERE Pessoa.nome = "+nome+"))) AS Resultado")
+    return cursor.fetchall()
 
 # implementacao de Local que uma pessoa que recebeu o spotted estava
+def getLocal(nome, cursor):
+    cursor.execute("SELECT Resultado.nome AS 'nome', 'Local'.evento AS 'evento' FROM 'Local' NATURAL JOIN (SELECT * FROM Tag NATURAL JOIN (SELECT Descrita.id_tag FROM Descrita NATURAL JOIN (SELECT * FROM Pessoa WHERE Pessoa.nome = "+nome+"))) AS Resultado")
+    return cursor.fetchall()
 
 # implementacao de Locais mais comuns
+
 
 # implementacao de Quais fenótipos mais comuns
 

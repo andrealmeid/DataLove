@@ -21,7 +21,9 @@ def connectDatabase(database_file):
 def printHelp():
     print("\nComando disponíveis:")
     print("q  : sai do programa")
-    print("gs : pega Spotteds recebido por uma pessoa")
+    print("gs : consulta os Spotteds recebido por uma pessoa")
+    print("gf : consulta os fenótipos de uma pessoa citada no Spotted")
+    print("gl : consulta os locais em que a pessoa que recebeu o Spotted estava quando o recebeu")
     print("h  : mostra esse menu\n")
 
 def main():
@@ -40,6 +42,24 @@ def main():
         elif cmd == "gs":
             nome = input("Digite o nome: ")
             data = getSpotted("'"+nome+"'", cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                for post in data:
+                    print(post[0])
+                print()
+        elif cmd == "gf":
+            nome = input("Digite o nome: ")
+            data = getFenotipo("'"+nome+"'", cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                for post in data:
+                    print(post[0])
+                print()
+        elif cmd == "gl":
+            nome = input("Digite o nome :")
+            data = getLocal("'"+nome+"'", cursor)
             if data == []:
                 print("Nenhum resultado.")
             else:
