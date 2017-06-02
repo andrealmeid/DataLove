@@ -30,3 +30,15 @@ Resumo:
 -  Desenvolver o que foi prometido em [T2](https://docs.google.com/document/d/10PkkHCgRBObbstiPGx3No5o24EuxUXqwiarU6lrdD0c/edit); salvo exceções que devem ser justificadas na parte escrita;
 - Fazer uma apresentação de 15 minutos, incluindo uma demostração ao vivo do software. Deve ser possível ver o código fonte das consultas e inserções.
 - Usar um SGDB relacional, pode ser do Kleber ou instalado na maquina de alguem.
+
+
+## Arquivos
+### Python
+- `datalove.py`: programa principal, com a interface para usuário realizar buscas e inserções.
+- `querys.py` : biblioteca com as funções de consulta usada pelo `datalove.py`.
+- `insert.py` : biblioteca com as funções de inserção usada pelo `datalove.py`.
+
+### SQL
+- `datalove.sqlite`: bando de dados com tabelas e tuplas, em formato SQLite3.
+- `datalove_create.sql`: backup do script de criação de tabelas do banco.
+- `database_insert.sql`: backup do script de inserção de tuplas no banco.
