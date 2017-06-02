@@ -46,7 +46,17 @@ SELECT * FROM Spotted ORDER BY "horário" DESC LIMIT 3;
 SELECT texto, tipo as "reação" FROM Spotted NATURAL JOIN (SELECT * FROM Reage NATURAL JOIN (SELECT * FROM Pessoa WHERE nome = "Fulano"));
 ```
 
-- Comentários que uma pessoa fez
+- Todos os comentários que uma pessoa fez (e seus respectivos spotteds de origem)
 ``` sql
 SELECT Resultado.nome, Spotted.texto, Resultado.texto FROM Spotted NATURAL JOIN (SELECT * FROM Comentario NATURAL JOIN (SELECT * FROM Pessoa Where Pessoa.nome = 'Fulano'))) AS Resultado;
+```
+
+- Todos os spotteds anônimos
+``` sql
+SELECT * FROM Spotted WHERE autor IS NULL;
+```
+
+- Todos os spotteds escritos por uma pessoa Fulano
+``` sql
+SELECT * FROM Spotted JOIN (SELECT id_pes FROM Pessoa WHERE nome = 'Fulano') ON id_pes = autor;
 ```
