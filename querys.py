@@ -3,7 +3,7 @@
 # implementacao de Spotteds recebido por uma pessoa
 def getSpotted(nome, cursor):
     cursor.execute("SELECT Spotted.texto FROM Spotted WHERE Spotted.cita = (SELECT id_pes FROM Pessoa WHERE nome = "+nome+")")
-    return cursor.fetchone()
+    return cursor.fetchall()
 
 # implementacao de Fenótipos de uma pessoa
 def getFenotipo(nome, cursor):
