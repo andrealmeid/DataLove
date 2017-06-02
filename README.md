@@ -1,6 +1,25 @@
 # DataLove
 _An amazing database for store love_
 
+                                oo                                        
+                                  oo                                        
+                                   oo     OOOOOOOO:       OOOOOOOO!       
+                                      oOOOO!!!!;;;;O    OO.......:;!O     
+                                     'OOO!!!;;;;;;;;O  O.......:   ;!O    
+                                     OOO!!!!;;::::::.OO........:    ;!O   
+                                     OO!!!!;;:::::..............:   ;!O   
+                                     OOO!!!;::::::..............:   ;!O   
+                                      OO!!;;::::::.............:   ;!O    
+                                       OO!;;::::::......oo.....::::!O     
+                                         O!!;::::::........oo..:::O       
+                                           !!!;:::::..........ooO         
+                                              !!;:::::.......O   oo       
+                                                ;;::::.....O        oo  ,o
+                                                   :::..O              ooo
+                                                     ::.              oooo
+                                                      :                   
+
+
 ## Parte escrita
 [Link para T3 no Google Docs](https://docs.google.com/document/d/1bWyk3xRlpup9H-jTxx2dAkVM_91c94KdML-5VZgI2u8/edit?usp=sharing) (entrega dia 02/06).
 
