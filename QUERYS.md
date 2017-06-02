@@ -30,3 +30,18 @@ SELECT Tag.nome, Fenotipo.categoria, Tag.quantidade FROM Tag NATURAL JOIN Fenoti
 ``` sql
 SELECT Resultado.nome, Curso.instituto FROM Curso NATURAL JOIN (SELECT * FROM Tag NATURAL JOIN (SELECT Descrita.id_tag FROM Descrita NATURAL JOIN (SELECT * FROM Pessoa WHERE nome = 'Fulano'))) AS Resultado;
 ```
+
+- Todas as pessoas que reagiram a um spotted e o horario em que isso aconteceu
+``` sql
+SELECT Pessoa.nome, tipo as "reação", Resultado.horario FROM Pessoa NATURAL JOIN (SELECT * FROM Reage NATURAL JOIN (SELECT * FROM Spotted WHERE id_spot = <id>)) AS Resultado;
+```
+
+- Os três spotteds mais recentes
+``` sql
+SELECT * FROM Spotted ORDER BY "horário" DESC LIMIT 3;
+```
+
+- Todos os spotteds que uma pessoa reagiu
+``` sql
+SELECT texto, tipo as "reação" FROM Spotted NATURAL JOIN (SELECT * FROM Reage NATURAL JOIN (SELECT * FROM Pessoa WHERE nome = "Italove"));
+```
