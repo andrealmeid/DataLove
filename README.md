@@ -35,6 +35,7 @@ Resumo:
 ## Arquivos
 ### Python
 - `datalove.py`: programa principal, com a interface para usuário realizar buscas e inserções.
+- `menu.py`: biblioteca com os menus de consulta e insercao
 - `querys.py` : biblioteca com as funções de consulta usada pelo `datalove.py`.
 - `insert.py` : biblioteca com as funções de inserção usada pelo `datalove.py`.
 
