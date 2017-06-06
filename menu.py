@@ -59,7 +59,71 @@ def menuQuerys(cursor):
             data = getLocalMaisComum(cursor)
             print(data[0] + ", com " + str(data[2]) + " citações durante " + data[1] + ".")
 
-        # retrona ao menu principal
+        # fenotipo mais comum
+        elif cmd == "fc":
+            data = getFenotipoMaisComum(cursor)
+            print(data[1] + " do tipo " + data[0] + " num total de " + str(data[2]) + " vezes.")
+
+        # get curso
+        elif cmd == "gc":
+            nome = input("Digite o nome: ")
+            data = getCurso(nome, cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                print(data[0][0])
+
+        # pessoas que reagiram a um spotted
+        elif cmd == "rs":
+            spotted = input("Digite o id do spotted: ")
+            data = getReacaoSpotted(spotted, cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                print("Nome    | Data e Horario")
+                print("--------|---------------")
+                for post in data:
+                    print(post[0] + " | " + post[2])
+                print()
+
+        # spotteds recentes
+        elif cmd == "sr":
+            data = getSpottedsRecentes(cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                print("Data e Horario      |  Spotted")
+                print("--------------------|---------")
+                for post in data:
+                    print(post[2] + " | " + post[1])
+                print()
+                    
+        # spotteds que uma pessoa reagiu
+        elif cmd == "gsr":
+            nome = input("Digite o nome: ")
+            data = getReacaoPessoa(nome, cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                print("Reacao |  Spotted")
+                print("-------|---------")
+                for post in data:
+                    print(post[1] + " | " + post[0])
+                print()
+
+        # comentarios de uma pessoa
+        elif cmd == "gcm":
+            nome = input("Digite o nome: ")
+            data = getComentarios(nome, cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                for post in data:
+                    print(post[0])
+                    print("--> " + post[1])
+                print()
+
+        # retorna ao menu principal
         elif cmd == "q":
             return
 
