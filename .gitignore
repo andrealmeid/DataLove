@@ -2,3 +2,8 @@ __pycache__/
 
 # temporary database changes
 *.sqlite-journal
+
+# vim 
+.*.swp
+.*.swo
+

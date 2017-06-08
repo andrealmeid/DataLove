@@ -14,6 +14,8 @@ def printQuerys():
     print("sr : spotteds recentes")
     print("gsr: spotteds que uma pessoa reagiu")
     print("gcm: comentarios de uma pessoa")
+    print("gsa: spotteds anônimos:")
+    print("gse: spotteds escritos por uma pessoa")
     print("h  : mostra esse menu")
     print("q  : volta ao menu principal\n")
 
@@ -125,10 +127,31 @@ def menuQuerys(cursor):
                 print("Nenhum resultado.")
             else:
                 for post in data:
-                    print(post[0])
-                    print("--> " + post[1])
+                    print("Nome      |  Comentário")
+                    print("----------|------------")
+                    print(post[0] + " | " + post[1])
                 print()
-
+        elif cmd == "gsa":
+            data = getSpottedAnonimo(cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                for post in data:
+                    print("Data e Horário     | Spotted Anônimo")
+                    print("------------------ | ---------------")
+                    print(pos[2] + " | " + post[1])
+                print()
+        elif cmd == "gse":
+            nome = input("Digite o nome: ")
+            data = getSpottedEscrito(nome, cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                for post in data:
+                    print("Nome    |  Spotted")
+                    print("--------|---------")
+                    print(post[4] + " | " + post[1])
+                print()
         # retorna ao menu principal
         elif cmd == "q":
             return
