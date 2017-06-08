@@ -4,10 +4,16 @@ from querys import *
 ## QUERYS ##
 def printQuerys():
     print("consultas disponíveis: ")
-    print("gs : consulta os Spotteds recebido por uma pessoa")
-    print("gf : consulta os fenótipos de uma pessoa citada no Spotted")
-    print("gl : consulta os locais em que a pessoa que recebeu o Spotted estava quando o recebeu")
-    print("lc : consulta o lugar mais citado em spotteds")
+    print("gs : Spotteds recebido por uma pessoa")
+    print("gf : fenótipos de uma pessoa citada no Spotted")
+    print("gl : locais em que a pessoa que recebeu o Spotted estava quando o recebeu")
+    print("lc : lugar mais citado em spotteds")
+    print("fc : fenotipo mais comum")
+    print("gc : curso de uma pessoa")
+    print("rs : pessoas que reagiram a um spotted")
+    print("sr : spotteds recentes")
+    print("gsr: spotteds que uma pessoa reagiu")
+    print("gcm: comentarios de uma pessoa")
     print("h  : mostra esse menu")
     print("q  : volta ao menu principal\n")
 
@@ -97,7 +103,7 @@ def menuQuerys(cursor):
                 for post in data:
                     print(post[2] + " | " + post[1])
                 print()
-                    
+
         # spotteds que uma pessoa reagiu
         elif cmd == "gsr":
             nome = input("Digite o nome: ")
