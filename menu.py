@@ -80,7 +80,8 @@ def menuQuerys(cursor):
             if data == []:
                 print("Nenhum resultado.")
             else:
-                print(data[0][0])
+                print("Curso          |   Instituto")
+                print(data[0][0] + " | " + data[0][1])
 
         # pessoas que reagiram a um spotted
         elif cmd == "rs":
@@ -92,7 +93,7 @@ def menuQuerys(cursor):
                 print("Nome    | Tipo")
                 print("--------|--------")
                 for post in data:
-                    print(post[0], post[1])
+                    print(post[0] + " | " + post[1])
                 print()
 
         # spotteds recentes

@@ -218,4 +218,5 @@ INSERT INTO Reage (id_pes, id_spot, tipo) VALUES (1106, 35810, 'curtiu');
 INSERT INTO Reage (id_pes, id_spot, tipo) VALUES (1107, 35810, 'amei');
 INSERT INTO Reage (id_pes, id_spot, tipo) VALUES (1108, 35810, 'triste');
 INSERT INTO Reage (id_pes, id_spot, tipo) VALUES (1081, 35810, 'curtiu');
+INSERT INTO Descrita (id_pes, id_tag) VALUES (1028, 13);
 COMMIT;

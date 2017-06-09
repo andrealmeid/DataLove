@@ -37,7 +37,7 @@ def getReacaoSpotted(spotted, cursor):
 
 # implementacao de Os tres spotteds mais recentes
 def getSpottedsRecentes(cursor):
-    cursor.execute("SELECT * FROM Spotted ORDER BY 'horário' DESC LIMIT 3;")
+    cursor.execute("SELECT * FROM Spotted ORDER BY spotted.'horário' DESC LIMIT 3;")
     return cursor.fetchall()
 
 # implementacao de Todos os spotteds que uma pessoa reagiu
