@@ -138,9 +138,16 @@ def menuQuerys(cursor):
                 print("Nenhum resultado.")
             else:
                 for post in data:
-                    print("Data e Horário     | Spotted Anônimo")
-                    print("------------------ | ---------------")
-                    print(pos[2] + " | " + post[1])
+                    if post[2]:
+                        print("Data e Horário     | Spotted Anônimo")
+                        print("------------------ | ---------------")
+                        print(post[2] + " | " + post[1])
+                        print()
+                    else:
+                        print("Spotted Anônimo")
+                        print("---------------")
+                        print(post[1])
+                        print()
                 print()
         elif cmd == "gse":
             nome = input("Digite o nome: ")
@@ -206,4 +213,3 @@ def menuInsertions(connection, cursor):
 
         else:
             print("Comando não reconhecido.")
-
