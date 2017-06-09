@@ -1,5 +1,21 @@
 # bibliteca com as consultas implementadas
 
+def getAllSpotteds(cursor):
+    cursor.execute("SELECT * FROM Spotted;")
+    return cursor.fetchall()
+
+def getAllComentarios(cursor):
+    cursor.execute("SELECT * FROM Comentario;")
+    return cursor.fetchall()
+
+def getAllTags(cursor):
+    cursor.execute("SELECT * FROM Tag;")
+    return cursor.fetchall()
+
+def getAllPessoas(cursor):
+    cursor.execute("SELECT * FROM Pessoa;")
+    return cursor.fetchall()
+
 # implementacao de Spotteds recebido por uma pessoa
 def getSpottedRecebido(nome, cursor):
     cursor.execute("SELECT Spotted.texto FROM Spotted WHERE Spotted.cita = (SELECT id_pes FROM Pessoa WHERE nome = '"+nome+"')")

@@ -5,6 +5,10 @@ from insercoes import *
 ## QUERYS ##
 def printQuerys():
     print("consultas disponíveis: ")
+    print("gas: Todos os spotteds")
+    print("gac: Todos os comentários")
+    print("gat: Todos as tags")
+    print("gap: Todos as pessoas")
     print("gs : Spotteds recebido por uma pessoa")
     print("gf : fenótipos de uma pessoa citada no Spotted")
     print("gl : locais em que a pessoa que recebeu o Spotted estava quando o recebeu")
@@ -36,6 +40,59 @@ def menuQuerys(cursor):
                 for post in data:
                     print(post[0])
                 print()
+
+        # get all spotteds
+        elif cmd == "gas":
+            data = getAllSpotteds(cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                for post in data:
+                    print("| ", end="")
+                    for item in post:
+                        print(str(item) + " | ", end="")
+                    print()
+                print()
+
+        # get all comentarios
+        elif cmd == "gac":
+            data = getAllComentarios(cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                for post in data:
+                    print("| ", end="")
+                    for item in post:
+                        print(str(item) + " | ", end="")
+                    print()
+                print()
+
+        # get all tags
+        elif cmd == "gat":
+            data = getAllTags(cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                for post in data:
+                    print("| ", end="")
+                    for item in post:
+                        print(str(item) + " | ", end="")
+                    print()
+                print()
+
+        # get all people
+        elif cmd == "gap":
+            data = getAllPessoas(cursor)
+            if data == []:
+                print("Nenhum resultado.")
+            else:
+                for post in data:
+                    print("| ", end="")
+                    for item in post:
+                        print(str(item) + " | ", end="")
+                    print()
+                print()
+
 
         # get fenotipo
         elif cmd == "gf":
