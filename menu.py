@@ -197,8 +197,8 @@ def menuQuerys(cursor):
             else:
                 for post in data:
                     if post[2]:
-                        print("Data e Horário     | Spotted Anônimo")
-                        print("------------------ | ---------------")
+                        print("Data e Horário      | Spotted Anônimo")
+                        print("------------------- | ---------------")
                         print(post[2] + " | " + post[1])
                         print()
                     else:
@@ -214,9 +214,8 @@ def menuQuerys(cursor):
                 print("Nenhum resultado.")
             else:
                 for post in data:
-                    print("Nome    |  Spotted")
-                    print("--------|---------")
-                    print(post[4] + " | " + post[1])
+                    print(post[1])
+                    print()
                 print()
         # retorna ao menu principal
         elif cmd == "q":
