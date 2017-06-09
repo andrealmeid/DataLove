@@ -89,10 +89,10 @@ def menuQuerys(cursor):
             if data == []:
                 print("Nenhum resultado.")
             else:
-                print("Nome    | Data e Horario")
-                print("--------|---------------")
+                print("Nome    | Tipo")
+                print("--------|--------")
                 for post in data:
-                    print(post[0] + " | " + post[2])
+                    print(post[0], post[1])
                 print()
 
         # spotteds recentes
