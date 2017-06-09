@@ -128,7 +128,7 @@ def menuQuerys(cursor):
         # fenotipo mais comum
         elif cmd == "fc":
             data = getFenotipoMaisComum(cursor)
-            print(data[1] + " do tipo " + data[0] + " num total de " + str(data[2]) + " vezes.")
+            print(data[0] + " do tipo " + data[1] + " num total de " + str(data[2]) + " vezes.")
 
         # get curso
         elif cmd == "gc":
