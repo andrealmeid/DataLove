@@ -185,28 +185,28 @@ def menuQuerys(cursor):
             if data == []:
                 print("Nenhum resultado.")
             else:
+                print("Spotted      |  Comentário")
+                print("-------------|------------")
                 for post in data:
-                    print("Nome      |  Comentário")
-                    print("----------|------------")
                     print(post[0] + " | " + post[1])
                 print()
+
         elif cmd == "gsa":
             data = getSpottedAnonimo(cursor)
             if data == []:
                 print("Nenhum resultado.")
             else:
+                print("Data e Horário      | Spotted Anônimo")
+                print("------------------- | ---------------")
                 for post in data:
                     if post[2]:
-                        print("Data e Horário      | Spotted Anônimo")
-                        print("------------------- | ---------------")
                         print(post[2] + " | " + post[1])
                         print()
                     else:
-                        print("Spotted Anônimo")
-                        print("---------------")
-                        print(post[1])
+                        print("----/--/-- --:--:-- | "+ post[1])
                         print()
                 print()
+
         elif cmd == "gse":
             nome = input("Digite o nome: ")
             data = getSpottedEscrito(nome, cursor)
