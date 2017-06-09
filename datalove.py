@@ -1,4 +1,5 @@
 #!/bin/python3
+# -*- coding: utf-8 -*-
 import sqlite3 as sql
 import sys
 from menu import *
