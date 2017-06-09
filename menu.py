@@ -1,5 +1,6 @@
 # biblioteca para implementar os menus de consultas e insercoes
 from querys import *
+from insercoes import *
 
 ## QUERYS ##
 def printQuerys():
@@ -162,3 +163,47 @@ def menuQuerys(cursor):
 
         else:
             print("Comando não reconhecido.")
+
+## INSERTIONS ##
+def printInsertions():
+    print("inserções disponíveis: ")
+    print("p  : insere uma pessoa")
+    print("s  : insere um spotted")
+    print("h  : mostra esse menu")
+    print("q  : volta ao menu principal\n")
+
+def menuInsertions(connection, cursor):
+    printInsertions()
+
+    while (True):
+        cmd = input("insert > ")
+
+        # insere uma pessoa
+        if cmd == "p":
+            nome = input("Digite o nome: ")
+            idade = input("Digite a idade (default = NULL): ")
+            inserePessoa(cursor, nome, idade)
+            connection.commit()
+            print()
+
+        # insere um spotted
+        if cmd == "s":
+            texto = input("Digite o texto: ")
+            horario = input("Digite a data e horario (YYYY-MM-DD HH:MM:SS): ")
+            cita = input("Digite o id da pessoa citada (default = NULL): ")
+            autor = input("Digite o id do autor (default = NULL): ")
+            insereSpotted(cursor, texto, horario, cita, autor)
+            connection.commit()
+            print()
+
+        # retorna ao menu principal
+        elif cmd == "q":
+            return
+
+        # mostra opcoes
+        elif cmd == "h":
+            printQuerys()
+
+        else:
+            print("Comando não reconhecido.")
+
